@@ -11,6 +11,7 @@
     <title>Squad G | Dados & Business Intelligence</title>
 
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/chat.css">
 </head>
 
 <body>
@@ -27,6 +28,7 @@
             <nav id="menu-principal" class="nav" aria-label="Navegação principal">
 
                 <ul>
+
                     <li>
                         <a href="home.html">Início</a>
                     </li>
@@ -50,6 +52,7 @@
                     <li>
                         <a href="contato.html">Contato</a>
                     </li>
+
                 </ul>
 
             </nav>
@@ -91,6 +94,8 @@
 
                 </div>
 
+
+                <!-- Indicadores -->
 
                 <div class="hero-indicators">
 
@@ -141,6 +146,7 @@
     </header>
 
 
+
     <main>
 
 
@@ -167,8 +173,6 @@
 
 
             <div class="servicos-grid">
-
-                <!-- Serviço 01 -->
 
                 <article class="servico-card">
 
@@ -284,14 +288,14 @@
 
             <div class="projetos-grid">
 
-                <!-- Projeto 01 -->
-
                 <article class="projeto-card">
 
                     <div class="projeto-imagem">
+
                         <span>
                             DATA
                         </span>
+
                     </div>
 
                     <div class="projeto-conteudo">
@@ -326,9 +330,11 @@
                 <article class="projeto-card">
 
                     <div class="projeto-imagem">
+
                         <span>
                             INSIGHTS
                         </span>
+
                     </div>
 
                     <div class="projeto-conteudo">
@@ -363,9 +369,11 @@
                 <article class="projeto-card">
 
                     <div class="projeto-imagem">
+
                         <span>
                             DASHBOARD
                         </span>
+
                     </div>
 
                     <div class="projeto-conteudo">
@@ -561,6 +569,78 @@
 
     </footer>
 
+
+    <div class="chat-widget">
+
+
+        <div class="chat-window">
+
+            <div class="chat-header">
+
+                <div class="chat-header-info">
+
+                    <span class="chat-title">
+                        G-Data Assistant
+                    </span>
+
+                    <span class="chat-status">
+                        Assistente da Squad G
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="chat-close"
+                    aria-label="Fechar chat">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="chat-messages">
+
+                <div class="chat-message bot">
+                    Olá! 👋 Sou o G-Data Assistant. Como posso ajudar?
+                </div>
+
+            </div>
+
+
+            <div class="chat-input-area">
+
+                <input
+                    type="text"
+                    class="chat-input"
+                    placeholder="Digite sua mensagem..."
+                    aria-label="Mensagem para o assistente">
+
+                <button
+                    type="button"
+                    class="chat-send"
+                    aria-label="Enviar mensagem">
+                    ➤
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="chat-toggle"
+            aria-label="Abrir G-Data Assistant"
+            aria-expanded="false">
+            💬
+        </button>
+
+    </div>
+
+
+    <script src="scripts/chat.js"></script>
 
 </body>
 
