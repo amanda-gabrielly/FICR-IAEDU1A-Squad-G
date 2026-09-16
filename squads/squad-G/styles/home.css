@@ -544,6 +544,51 @@ ul {
 }
 
 
+/* ---------- Indicadores do Hero ---------- */
+
+.hero-indicators {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    margin-top: 42px;
+    padding-top: 25px;
+
+    border-top: 1px solid #d8e2ec;
+
+    max-width: 650px;
+}
+
+.indicator {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    position: relative;
+}
+
+.indicator strong {
+    color: #173f73;
+
+    font-size: 1rem;
+    font-weight: 800;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.indicator span {
+    color: #7b8794;
+    font-size: 0.78rem;
+}
+
+.indicator:hover strong {
+    color: #1769aa;
+    transform: translateX(3px);
+}
+
+
 /* ---------- Responsividade ---------- */
 
 @media (max-width: 900px) {
