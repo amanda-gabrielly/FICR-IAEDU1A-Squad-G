@@ -1,67 +1,420 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Squad G • Portfólio</title>
-  <link rel="stylesheet" href="styles/home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Squad G — soluções em Dados e Business Intelligence para transformar informações em decisões mais inteligentes.">
+
+    <title>Squad G | Dados & Business Intelligence</title>
+
+    <link rel="stylesheet" href="styles/home.css">
 </head>
 
 <body>
 
-  <header id="topo" class="header">
-    <div class="menu-container">
-      <nav id="menu-principal" class="nav">
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="contato.html">Contato</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-        </ul>
-      </nav>
-    </div>
+    <!-- Cabeçalho -->
+    <header class="header" id="topo">
 
-    <div class="hero">
-      <h1 id="titulo-principal"><a href="home.html">Squad G</a></h1>
-      <p>Excelência e soluções profissionais.</p>
-    </div>
-  </header>
+        <div class="menu-container">
 
-  <section id="projetos" class="projetos">
-    <h2>Projetos</h2>
+            <a href="home.html" class="logo">
+                Squad G
+            </a>
 
-    <article class="projeto">
-      <h3>Projeto Principal</h3>
-      <p>Entrega estratégica realizada pelo Squad G.</p>
-    </article>
+            <nav id="menu-principal" class="nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="habilidades.html">Habilidades</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
 
-    <article class="projeto">
-      <h3>Projeto Secundário</h3>
-      <p>Iniciativa complementar desenvolvida com precisão.</p>
-    </article>
-  </section>
+        </div>
 
-  <!-- CONTATO -->
-  <section id="contato" class="contato">
-    <h2>Contato</h2>
+        <!-- Hero -->
+        <section class="hero">
 
-    <form id="form-contato" class="form-contato">
-      <label for="nome">Nome</label>
-      <input id="nome" type="text" required>
+            <div class="hero-content">
 
-      <label for="email">E-mail</label>
-      <input id="email" type="email" required>
+                <span class="hero-tag">DADOS • BI • ANALYTICS</span>
 
-      <label for="mensagem">Mensagem</label>
-      <textarea id="mensagem" rows="3" required></textarea>
+                <h1>
+                    Transformamos
+                    <span>dados em decisões.</span>
+                </h1>
 
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+                <p>
+                    Criamos soluções em Dados e Business Intelligence
+                    para transformar informações em insights que ajudam
+                    empresas a tomar decisões mais estratégicas.
+                </p>
 
-  <footer id="rodape" class="footer">
-    <p>&copy; 2025 Squad G</p>
-  </footer>
+                <div class="hero-buttons">
+                    <a href="projetos.html" class="btn btn-primary">
+                        Conheça nossos projetos
+                    </a>
+
+                    <a href="contato.html" class="btn btn-secondary">
+                        Fale com a gente
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </header>
+
+
+    <main>
+
+        <!-- Serviços -->
+        <section class="servicos" id="servicos">
+
+            <div class="section-header">
+
+                <span class="section-tag">O QUE FAZEMOS</span>
+
+                <h2>
+                    Dados que fazem sentido
+                    para o seu negócio.
+                </h2>
+
+                <p>
+                    Da organização dos dados à visualização dos indicadores,
+                    desenvolvemos soluções que tornam informações complexas
+                    mais simples de entender e utilizar.
+                </p>
+
+            </div>
+
+
+            <div class="servicos-grid">
+
+                <article class="servico-card">
+
+                    <span class="servico-numero">01</span>
+
+                    <h3>Business Intelligence</h3>
+
+                    <p>
+                        Dashboards e indicadores para acompanhar resultados
+                        e apoiar decisões estratégicas.
+                    </p>
+
+                    <a href="servicos.html">
+                        Saiba mais →
+                    </a>
+
+                </article>
+
+
+                <article class="servico-card">
+
+                    <span class="servico-numero">02</span>
+
+                    <h3>Análise de Dados</h3>
+
+                    <p>
+                        Exploração e tratamento de dados para encontrar
+                        padrões, tendências e oportunidades.
+                    </p>
+
+                    <a href="servicos.html">
+                        Saiba mais →
+                    </a>
+
+                </article>
+
+
+                <article class="servico-card">
+
+                    <span class="servico-numero">03</span>
+
+                    <h3>Visualização de Dados</h3>
+
+                    <p>
+                        Transformamos informações complexas em visualizações
+                        claras, intuitivas e fáceis de interpretar.
+                    </p>
+
+                    <a href="servicos.html">
+                        Saiba mais →
+                    </a>
+
+                </article>
+
+
+                <article class="servico-card">
+
+                    <span class="servico-numero">04</span>
+
+                    <h3>Soluções Digitais</h3>
+
+                    <p>
+                        Interfaces e ferramentas que facilitam o acesso
+                        e o uso das informações.
+                    </p>
+
+                    <a href="servicos.html">
+                        Saiba mais →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Projetos -->
+        <section class="projetos" id="projetos">
+
+            <div class="section-header">
+
+                <span class="section-tag">PROJETOS</span>
+
+                <h2>
+                    Transformando dados
+                    em resultados.
+                </h2>
+
+                <p>
+                    Conheça alguns dos projetos desenvolvidos pela Squad G.
+                </p>
+
+            </div>
+
+
+            <div class="projetos-grid">
+
+                <article class="projeto-card">
+
+                    <div class="projeto-imagem">
+                        <span>DATA</span>
+                    </div>
+
+                    <div class="projeto-conteudo">
+
+                        <span class="projeto-categoria">
+                            Business Intelligence
+                        </span>
+
+                        <h3>Sales Analytics</h3>
+
+                        <p>
+                            Análise de dados de vendas para acompanhamento
+                            do desempenho comercial e identificação
+                            de oportunidades.
+                        </p>
+
+                        <div class="tecnologias">
+                            <span>Python</span>
+                            <span>SQL</span>
+                            <span>Power BI</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="projeto-card">
+
+                    <div class="projeto-imagem">
+                        <span>INSIGHTS</span>
+                    </div>
+
+                    <div class="projeto-conteudo">
+
+                        <span class="projeto-categoria">
+                            Data Analytics
+                        </span>
+
+                        <h3>Customer Insights</h3>
+
+                        <p>
+                            Análise do comportamento dos clientes para
+                            identificar padrões e apoiar estratégias
+                            de negócio.
+                        </p>
+
+                        <div class="tecnologias">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>SQL</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="projeto-card">
+
+                    <div class="projeto-imagem">
+                        <span>DASHBOARD</span>
+                    </div>
+
+                    <div class="projeto-conteudo">
+
+                        <span class="projeto-categoria">
+                            Data Visualization
+                        </span>
+
+                        <h3>Business Dashboard</h3>
+
+                        <p>
+                            Dashboard interativo para acompanhamento de
+                            indicadores e visualização dos principais
+                            resultados do negócio.
+                        </p>
+
+                        <div class="tecnologias">
+                            <span>Power BI</span>
+                            <span>SQL</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="projetos-link">
+
+                <a href="projetos.html">
+                    Ver todos os projetos →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Sobre -->
+        <section class="sobre-resumo" id="sobre">
+
+            <div class="sobre-conteudo">
+
+                <span class="section-tag">SOBRE A SQUAD G</span>
+
+                <h2>
+                    Tecnologia,
+                    dados e estratégia.
+                </h2>
+
+                <p>
+                    Somos uma equipe multidisciplinar apaixonada por
+                    tecnologia e dados. Unimos análise, visualização
+                    e desenvolvimento para criar soluções digitais
+                    que ajudam empresas a transformar informações
+                    em conhecimento.
+                </p>
+
+                <a href="sobre.html" class="btn btn-primary">
+                    Conheça nossa equipe
+                </a>
+
+            </div>
+
+
+            <div class="sobre-destaque">
+
+                <div class="destaque-item">
+                    <strong>Dados</strong>
+                    <span>Transformação</span>
+                </div>
+
+                <div class="destaque-item">
+                    <strong>BI</strong>
+                    <span>Estratégia</span>
+                </div>
+
+                <div class="destaque-item">
+                    <strong>UX</strong>
+                    <span>Experiência</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="cta">
+
+            <div class="cta-content">
+
+                <span class="section-tag">VAMOS CONVERSAR?</span>
+
+                <h2>
+                    Seus dados podem contar
+                    uma história.
+                </h2>
+
+                <p>
+                    Vamos descobrir juntos o que eles podem revelar
+                    sobre o seu negócio.
+                </p>
+
+                <a href="contato.html" class="btn btn-primary">
+                    Fale com a gente
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer class="footer" id="rodape">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <a href="home.html" class="logo">
+                    Squad G
+                </a>
+
+                <p>
+                    Dados que transformam decisões.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="sobre.html">Sobre</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="contato.html">Contato</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Squad G. Projeto acadêmico.
+            </p>
+
+        </div>
+
+    </footer>
 
 </body>
+
 </html>
