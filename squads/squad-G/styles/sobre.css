@@ -1,148 +1,528 @@
+/* Configurações gerais */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #d3d3d3;
-  background-size: cover;
-  color: #333;
-  
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    background-color: #f5f7fa;
+    color: #172033;
+    line-height: 1.6;
 }
 
-header {
-  display: flex;
-  width: 100%;
-  max-width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 0px;
-  margin-top: -110px;
-  margin-bottom: -75px;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-header img {
-  height: 375px;
-  width: auto;
+ul {
+    list-style: none;
 }
 
-.menu-container ul {
-  list-style: none;
-  display:flex;
-  gap: 30px;
-  margin-top: -75px;
+
+/* Cabeçalho */
+
+.header {
+    background-color: #ffffff;
 }
 
-.menu-container ul li a {
-  text-decoration: none;
-  color: #000000;
-  font-size: 16px;
-  font-weight: bold;
+.menu-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.menu-container ul li a:hover{
-  text-decoration: underline;
+.logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #173f73;
+    letter-spacing: -0.5px;
 }
 
-main {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-  
+.nav ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav a {
+    color: #4b5563;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: #1769aa;
+}
+
+
+/* Título da página */
+
+.titulo-equipe {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    padding: 90px 0 70px;
+}
+
+.sobre-label {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    color: #1769aa;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
 }
 
 .titulo-equipe h1 {
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-  font-size: 42px;
-  color: #000000;
+    max-width: 760px;
+
+    color: #172033;
+
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 0.98;
+    letter-spacing: -3px;
 }
 
-.altura{
-  height: 575px;
+.titulo-equipe p {
+    max-width: 650px;
+
+    margin-top: 28px;
+
+    color: #596579;
+    font-size: 1.08rem;
+    line-height: 1.8;
 }
+
+
+/* Quem Somos */
+
 .quem-somos-box {
-  width: 70%;
-  max-width: 1200px;
-  margin: 30px auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 8px;
-  
+    width: min(1180px, 92%);
+    margin: 0 auto;
+
+    padding: 90px 0;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+    align-items: start;
+
+    border-top: 1px solid #e5eaf0;
 }
 
-.quem-esquerda h1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 42px;
-  font-weight: 600;
-  color: #000000;
- 
+.quem-esquerda {
+    position: relative;
+}
+
+.section-number {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #1769aa;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.quem-esquerda h2,
+.equipe-titulo h2 {
+    color: #172033;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.quem-direita {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .quem-direita p {
-  font-size: 17px;
-  line-height: 1.6;
-  text-align: justify;
-  color: #000000;
-  padding-left: 20px;
-  
+    color: #667085;
+    line-height: 1.8;
 }
 
-.container {
-  text-align: center;
-  margin-top: 50px;
+.quem-direita strong {
+    color: #1769aa;
 }
 
-.container h1 {
-  font-size: 42px;
-  margin-bottom: 30px;
-  color: #000000;
+
+/* Missão, visão e valores */
+
+.proposito {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+
+    padding: 30px 0 100px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.proposito-card {
+    min-height: 270px;
+
+    padding: 28px;
+
+    background-color: #ffffff;
+    border: 1px solid #e4e9ef;
+    border-radius: 12px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.proposito-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(23, 32, 51, 0.08);
+}
+
+.proposito-card span {
+    color: #1769aa;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.proposito-card h2 {
+    margin-top: 20px;
+
+    color: #172033;
+    font-size: 1.35rem;
+    line-height: 1.25;
+}
+
+.proposito-card p {
+    margin-top: 12px;
+
+    color: #667085;
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+
+/* Equipe */
+
+.equipe {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+
+    padding: 30px 0 100px;
+}
+
+.equipe-titulo {
+    max-width: 700px;
+    margin-bottom: 48px;
+}
+
+.equipe-titulo p {
+    margin-top: 18px;
+
+    color: #667085;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .fotos {
-  display: inline-block;
-  width: 230px;
-  margin: 15px;
-  background: #ffffff;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+
+    background-color: #ffffff;
+    border: 1px solid #e4e9ef;
+    border-radius: 12px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
+
+.fotos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(23, 32, 51, 0.08);
+}
+
+
+/* Fotos da equipe */
 
 .fotos img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 10px;
+    width: 100%;
+    height: 260px;
+
+    display: block;
+
+    object-fit: cover;
 }
 
-.fotos h2 {
-  font-size: 22px;
-  margin-top: 15px;
-  color: #000000;
+
+/* Amanda */
+
+.fotos:nth-child(1) img {
+    object-position: center 25%;
 }
 
-.fotos p {
-  font-size: 15px;
-  color: #000;
-  font-weight: bold;
+
+/* Aylton */
+
+.fotos:nth-child(2) img {
+    object-position: center center;
 }
 
-footer {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  padding: 20px;
-  margin-top: 60px;
-  font-size: 15px;
-  font-weight: bold;
+
+/* Diógenes */
+
+.fotos:nth-child(3) img {
+    object-position: center center;
 }
 
-.footer p{
-  text-align: center;
+
+/* Guilherme */
+
+.fotos:nth-child(4) img {
+    object-position: center center;
+}
+
+
+.fotos-info {
+    padding: 26px;
+}
+
+.fotos-info span {
+    color: #1769aa;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.fotos-info h3 {
+    margin-top: 8px;
+
+    color: #172033;
+    font-size: 1.2rem;
+}
+
+.fotos-info p {
+    margin-top: 12px;
+
+    color: #667085;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+
+/* Chamada final */
+
+.sobre-final {
+    padding: 100px 20px;
+
+    background-color: #173f73;
+
+    text-align: center;
+}
+
+.sobre-final span {
+    color: #b8d9f2;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.sobre-final h2 {
+    max-width: 700px;
+    margin: 18px auto 0;
+
+    color: #ffffff;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+
+/* Rodapé */
+
+.footer {
+    background-color: #101827;
+    color: #aab4c2;
+}
+
+.footer-content {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+
+    padding: 55px 0;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer .logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.footer-brand p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #aab4c2;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:visited {
+    color: #aab4c2;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    padding: 18px 20px;
+
+    border-top: 1px solid #273244;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 900px) {
+
+    .quem-somos-box {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .proposito {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .equipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .menu-container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .titulo-equipe {
+        padding: 65px 0;
+    }
+
+    .titulo-equipe h1 {
+        font-size: 3rem;
+        letter-spacing: -2px;
+    }
+
+    .quem-somos-box {
+        padding: 65px 0;
+    }
+
+    .proposito {
+        grid-template-columns: 1fr;
+        padding: 30px 0 70px;
+    }
+
+    .equipe {
+        padding: 30px 0 70px;
+    }
+
+    .equipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fotos img {
+        height: 300px;
+    }
+
+    .fotos:nth-child(1) img {
+        object-position: center 25%;
+    }
+
+    .fotos:nth-child(2) img {
+        object-position: center center;
+    }
+
+    .fotos:nth-child(3) img {
+        object-position: center center;
+    }
+
+    .fotos:nth-child(4) img {
+        object-position: center center;
+    }
+
+    .sobre-final {
+        padding: 70px 20px;
+    }
+
+    .sobre-final h2 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
 }
