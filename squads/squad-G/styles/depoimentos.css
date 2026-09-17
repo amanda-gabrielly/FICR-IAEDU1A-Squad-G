@@ -1,125 +1,610 @@
-/* Estilos base - personalize para seu squad */
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont,
-               'Segoe UI', sans-serif;
-    background-color: #f7f9fc; 
-  @apply text-gray-700;
-}
-main {
-  @apply container mx-auto px-4 py-8;
-}
-header {
-  @apply sticky top-0 z-50 bg-white shadow-md p-4 flex justify-between items-center;
+/* Configurações gerais */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.logo img {
-  height: 40px;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    background-color: #f5f7fa;
+    color: #172033;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* Cabeçalho */
+
+.header {
+    background-color: #ffffff;
+}
+
+.menu-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #173f73;
+    letter-spacing: -0.5px;
 }
 
 .nav ul {
-  @apply flex space-x-4;
+    display: flex;
+    align-items: center;
+    gap: 28px;
 }
 
 .nav a {
-  @apply text-gray-600 hover:text-indigo-600 font-medium transition duration-150;
+    color: #4b5563;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
 }
 
-footer {
-  @apply text-center p-4 bg-gray-800 text-white mt-8;
+.nav a:hover {
+    color: #1769aa;
 }
+
+
+/* Título */
+
 .titulo-depoimentos {
-  @apply flex justify-center mb-10;
+    width: min(1180px, 92%);
+    margin: 0 auto;
+
+    padding: 90px 0 80px;
+
+    text-align: center;
 }
 
-.titulo-depoimentos img {
-  @apply max-w-full h-auto;
-  max-height: 100px;
+.depoimentos-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #1769aa;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
 }
 
+.titulo-depoimentos h1 {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    color: #172033;
+
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -2.5px;
+}
+
+.titulo-depoimentos p {
+    max-width: 650px;
+
+    margin: 28px auto 0;
+
+    color: #596579;
+
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+
+/* Seção de depoimentos */
+
+.depoimentos {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+
+    padding: 90px 0 100px;
+
+    border-top: 1px solid #e5eaf0;
+}
+
+.depoimentos-cabecalho {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.section-number {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #1769aa;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.depoimentos-cabecalho h2 {
+    color: #172033;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+
+/* Carrossel */
 
 .container-depoimentos {
-  @apply relative max-w-4xl mx-auto overflow-hidden rounded-xl shadow-2xl;
-  height: 400px; 
-  background-color: #ffffff;
+    position: relative;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e4e9ef;
+    border-radius: 14px;
+
+    box-shadow: 0 14px 35px rgba(23, 32, 51, 0.05);
 }
 
-
 .container-depoimentos input[type="radio"] {
-  display: none;
+    display: none;
 }
 
 .carrossel {
-  @apply relative h-full;
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
 }
 
 .cards {
-  @apply flex h-full transition-transform duration-700 ease-in-out;
-  width: 400%;
+    display: flex;
+
+    width: 400%;
+
+    transition: transform 0.6s ease;
 }
+
 .card {
-  @apply w-1/4 flex-shrink-0 flex flex-col items-center justify-center p-8 text-center;
+    width: 25%;
+    flex-shrink: 0;
+
+    min-height: 460px;
+
+    padding: 65px 100px 85px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
 }
+
+
+/* Fotos */
 
 .card .foto {
-  @apply w-24 h-24 rounded-full object-cover border-4 border-indigo-500 mb-4;
+    width: 105px;
+    height: 105px;
+
+    margin-bottom: 18px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid #eef5fb;
 }
 
-.card .nome {
-  @apply text-xl font-bold text-indigo-700 mb-2;
+
+/* Aspas */
+
+.aspas {
+    color: #1769aa;
+
+    font-size: 3.8rem;
+    font-weight: 800;
+
+    line-height: 0.7;
+
+    margin-bottom: 15px;
 }
+
+
+/* Texto */
 
 .card .texto {
-  @apply text-base italic leading-relaxed max-w-md mx-auto;
-  color: #374151; 
+    max-width: 620px;
+
+    color: #596579;
+
+    font-size: 1.02rem;
+    font-style: italic;
+
+    line-height: 1.8;
 }
 
+
+/* Nome */
+
+.card .nome {
+    margin-top: 24px;
+
+    color: #173f73;
+
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+
+/* Setas */
+
 .arrow {
-  @apply absolute top-1/2 -translate-y-1/2 text-4xl text-white cursor-pointer select-none px-4 py-2 rounded-full;
-  background-color: rgba(79, 70, 229, 0.7); 
-  transition: background-color 0.3s;
-  z-index: 10;
+    position: absolute;
+
+    top: 50%;
+
+    width: 42px;
+    height: 42px;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background-color: #eef5fb;
+    color: #1769aa;
+
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+
+    z-index: 5;
 }
 
 .arrow:hover {
-  background-color: rgba(79, 70, 229, 1);
+    background-color: #1769aa;
+    color: #ffffff;
+
+    transform: translateY(-50%) scale(1.05);
 }
 
 .prev {
-  left: 10px;
+    left: 22px;
 }
 
 .next {
-  right: 10px;
+    right: 22px;
 }
 
-.arrow {
-  display: none;
-}
-#card1:checked ~ .carrossel .arrow[for="card4"], 
-#card1:checked ~ .carrossel .arrow[for="card2"], 
-#card2:checked ~ .carrossel .arrow[for="card1"], 
-#card2:checked ~ .carrossel .arrow[for="card3"], 
-#card3:checked ~ .carrossel .arrow[for="card2"], 
-#card3:checked ~ .carrossel .arrow[for="card4"], 
-#card4:checked ~ .carrossel .arrow[for="card3"], 
+
+/* Exibição das setas */
+
+#card1:checked ~ .carrossel .arrow[for="card4"],
+#card1:checked ~ .carrossel .arrow[for="card2"],
+
+#card2:checked ~ .carrossel .arrow[for="card1"],
+#card2:checked ~ .carrossel .arrow[for="card3"],
+
+#card3:checked ~ .carrossel .arrow[for="card2"],
+#card3:checked ~ .carrossel .arrow[for="card4"],
+
+#card4:checked ~ .carrossel .arrow[for="card3"],
 #card4:checked ~ .carrossel .arrow[for="card1"] {
-    display: block;
+    display: flex;
 }
+
+
+/* Movimento dos cards */
+
 #card1:checked ~ .carrossel .cards {
-  transform: translateX(0%);
+    transform: translateX(0%);
 }
 
 #card2:checked ~ .carrossel .cards {
-  transform: translateX(-25%);
+    transform: translateX(-25%);
 }
-
 
 #card3:checked ~ .carrossel .cards {
-  transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#card4:checked ~ .carrossel .cards {
+    transform: translateX(-75%);
 }
 
 
-#card4:checked ~ .carrossel .cards {
-  transform: translateX(-75%);
-  }
+/* Indicadores */
 
+.indicadores {
+    position: absolute;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.indicadores label {
+    width: 8px;
+    height: 8px;
+
+    display: block;
+
+    border-radius: 50%;
+
+    background-color: #cbd5e1;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.indicadores label:hover {
+    background-color: #1769aa;
+
+    transform: scale(1.2);
+}
+
+#card1:checked ~ .carrossel .indicadores label:nth-child(1),
+#card2:checked ~ .carrossel .indicadores label:nth-child(2),
+#card3:checked ~ .carrossel .indicadores label:nth-child(3),
+#card4:checked ~ .carrossel .indicadores label:nth-child(4) {
+    background-color: #1769aa;
+
+    transform: scale(1.25);
+}
+
+
+/* Chamada final */
+
+.depoimentos-final {
+    padding: 100px 20px;
+
+    background-color: #173f73;
+
+    text-align: center;
+}
+
+.depoimentos-final span {
+    color: #b8d9f2;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.depoimentos-final h2 {
+    max-width: 700px;
+
+    margin: 18px auto 0;
+
+    color: #ffffff;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+
+/* Rodapé */
+
+.footer {
+    background-color: #101827;
+
+    color: #aab4c2;
+}
+
+.footer-content {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+
+    padding: 55px 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.footer .logo {
+    color: #ffffff;
+
+    font-size: 1.35rem;
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+.footer-brand p {
+    margin-top: 10px;
+
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #aab4c2;
+
+    font-size: 0.9rem;
+
+    transition: color 0.2s ease;
+}
+
+.footer-links a:visited {
+    color: #aab4c2;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    padding: 18px 20px;
+
+    border-top: 1px solid #273244;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 900px) {
+
+    .card {
+        padding: 55px 70px 80px;
+    }
+
+    .arrow {
+        width: 38px;
+        height: 38px;
+    }
+
+    .prev {
+        left: 15px;
+    }
+
+    .next {
+        right: 15px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .menu-container {
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 20px 0;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 14px;
+    }
+
+    .titulo-depoimentos {
+        padding: 65px 0;
+    }
+
+    .titulo-depoimentos h1 {
+        font-size: 3rem;
+
+        letter-spacing: -2px;
+    }
+
+    .depoimentos {
+        padding: 65px 0 70px;
+    }
+
+    .card {
+        min-height: 500px;
+
+        padding: 50px 45px 75px;
+    }
+
+    .card .foto {
+        width: 95px;
+        height: 95px;
+    }
+
+    .card .texto {
+        font-size: 0.95rem;
+    }
+
+    .arrow {
+        width: 36px;
+        height: 36px;
+
+        font-size: 1.1rem;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    .depoimentos-final {
+        padding: 70px 20px;
+    }
+
+    .depoimentos-final h2 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+}

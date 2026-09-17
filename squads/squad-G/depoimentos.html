@@ -1,100 +1,516 @@
-<!-- Depoimentos - Squad G -->
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="styles/depoimentos.css">
-  <title>Depoimentos - Squad G</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/depoimentos.css">
+    <link rel="stylesheet" href="styles/chat.css">
+
+    <title>Depoimentos - Squad G</title>
 </head>
+
 <body>
-  <header>
-    <div class="logo">
-      <img src="squads/squad-G/styles/img/logo squadG.png" alt="logo">
-    </div>
 
-    <div class="menu-container">
-      <nav id="menu-principal" class="nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Sobre Nós</a></li>
-          <li><a href="#">Serviços</a></li>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Habilidades</a></li>
-          <li><a href="#">Depoimentos</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <div class="titulo-depoimentos">
-      <img src="squads/squad-G/styles/img/logo-depoimentos.png" alt="logo depoimentos">
-    </div>
+    <header class="header">
 
-    <div class="container-depoimentos">
-      <input type="radio" name="slider" id="card1" checked>
-      <input type="radio" name="slider" id="card2">
-      <input type="radio" name="slider" id="card3">
-      <input type="radio" name="slider" id="card4">
+        <div class="menu-container">
 
-      <div class="carrossel">
+            <a href="home.html" class="logo">
+                Squad G
+            </a>
 
-        <div class="cards">
-          
-          <div class="card">
-            <img class="foto" src="squads/squad-G/styles/img/usuario1.png" alt="card1">
-            <div class="nome">Davi Ribeiro</div>
-            <div class="texto">
-              "O projeto desenvolvido pelo Squad G me surpreendeu bastante, interface é bem intuitiva e o impacto foi imediato!"
-            </div>
-          </div>
-          
-          <div class="card">
-            <img class="foto" src="squads/squad-G/styles/img/usuario2.png" alt="card2">
-            <div class="nome">Carla Silva</div>
-            <div class="texto">
-              "Fiquei impressionada com o nível de detalhe e a qualidade da execução. É visível o empenho do Squad G em entregar uma solução detalhada."
-            </div>
-          </div>
+            <nav id="menu-principal" class="nav">
 
-          <div class="card">
-            <img class="foto" src="squads/squad-G/styles/img/usuario3.png" alt="card3">
-            <div class="nome">Gabriel Santos</div>
-            <div class="texto">
-              "Há uma consistência visual forte em todas as páginas, o que reforça a identidade do projeto. É um trabalho de design muito coeso e bem executado pelo Squad G."
-            </div>
-          </div>
+                <ul>
 
-          <div class="card">
-            <img class="foto" src="squads/squad-G/styles/img/usuario4.png" alt="card4">
-            <div class="nome">Luiza Barbosa</div>
-            <div class="texto">
-              "O design é limpo, moderno e muito profissional. A paleta de cores escolhida pelo Squad G é agradável e facilita a leitura do conteúdo."
-            </div>
-          </div>
+                    <li>
+                        <a href="home.html">
+                            Início
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="sobre.html">
+                            Sobre
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="servicos.html">
+                            Serviços
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="projetos.html">
+                            Projetos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="habilidades.html">
+                            Habilidades
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="depoimentos.html">
+                            Depoimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contato.html">
+                            Contato
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
 
         </div>
 
-        <label class="arrow prev" for="card1">&#10094;</label>
-        <label class="arrow next" for="card2">&#10095;</label>
+    </header>
 
-        <label class="arrow prev" for="card2">&#10094;</label>
-        <label class="arrow next" for="card3">&#10095;</label>
 
-        <label class="arrow prev" for="card3">&#10094;</label>
-        <label class="arrow next" for="card4">&#10095;</label>
+    <main>
 
-        <label class="arrow prev" for="card4">&#10094;</label>
-        <label class="arrow next" for="card1">&#10095;</label>
+        <section class="titulo-depoimentos">
 
-      </div>
+            <span class="depoimentos-label">
+                SQUAD G
+            </span>
+
+            <h1>
+                O que dizem sobre nosso trabalho
+            </h1>
+
+            <p>
+                Conheça algumas percepções sobre os projetos
+                e soluções desenvolvidos pela Squad G.
+            </p>
+
+        </section>
+
+
+        <section class="depoimentos">
+
+            <div class="depoimentos-cabecalho">
+
+                <span class="section-number">
+                    01
+                </span>
+
+                <h2>
+                    Depoimentos
+                </h2>
+
+            </div>
+
+
+            <div class="container-depoimentos">
+
+                <input
+                    type="radio"
+                    name="slider"
+                    id="card1"
+                    checked
+                >
+
+                <input
+                    type="radio"
+                    name="slider"
+                    id="card2"
+                >
+
+                <input
+                    type="radio"
+                    name="slider"
+                    id="card3"
+                >
+
+                <input
+                    type="radio"
+                    name="slider"
+                    id="card4"
+                >
+
+
+                <div class="carrossel">
+
+                    <div class="cards">
+
+
+                        <!-- Depoimento 1 -->
+
+                        <article class="card">
+
+                            <img
+                                class="foto"
+                                src="styles/img/usuario1.png"
+                                alt="Foto de Davi Ribeiro"
+                            >
+
+                            <span class="aspas">
+                                “
+                            </span>
+
+                            <p class="texto">
+                                O projeto desenvolvido pelo Squad G
+                                me surpreendeu bastante, a interface
+                                é bem intuitiva e o impacto foi imediato!
+                            </p>
+
+                            <h3 class="nome">
+                                Davi Ribeiro
+                            </h3>
+
+                        </article>
+
+
+                        <!-- Depoimento 2 -->
+
+                        <article class="card">
+
+                            <img
+                                class="foto"
+                                src="styles/img/usuario2.png"
+                                alt="Foto de Carla Silva"
+                            >
+
+                            <span class="aspas">
+                                “
+                            </span>
+
+                            <p class="texto">
+                                Fiquei impressionada com o nível de
+                                detalhe e a qualidade da execução.
+                                É visível o empenho do Squad G em
+                                entregar uma solução detalhada.
+                            </p>
+
+                            <h3 class="nome">
+                                Carla Silva
+                            </h3>
+
+                        </article>
+
+
+                        <!-- Depoimento 3 -->
+
+                        <article class="card">
+
+                            <img
+                                class="foto"
+                                src="styles/img/usuario3.png"
+                                alt="Foto de Gabriel Santos"
+                            >
+
+                            <span class="aspas">
+                                “
+                            </span>
+
+                            <p class="texto">
+                                Há uma consistência visual forte em
+                                todas as páginas, o que reforça a
+                                identidade do projeto. É um trabalho
+                                de design muito coeso e bem executado
+                                pelo Squad G.
+                            </p>
+
+                            <h3 class="nome">
+                                Gabriel Santos
+                            </h3>
+
+                        </article>
+
+
+                        <!-- Depoimento 4 -->
+
+                        <article class="card">
+
+                            <img
+                                class="foto"
+                                src="styles/img/usuario4.png"
+                                alt="Foto de Luiza Barbosa"
+                            >
+
+                            <span class="aspas">
+                                “
+                            </span>
+
+                            <p class="texto">
+                                O design é limpo, moderno e muito
+                                profissional. A paleta de cores
+                                escolhida pelo Squad G é agradável
+                                e facilita a leitura do conteúdo.
+                            </p>
+
+                            <h3 class="nome">
+                                Luiza Barbosa
+                            </h3>
+
+                        </article>
+
+
+                    </div>
+
+
+                    <!-- Navegação do carrossel -->
+
+                    <label
+                        class="arrow prev"
+                        for="card4"
+                        aria-label="Depoimento anterior"
+                    >
+                        &#10094;
+                    </label>
+
+                    <label
+                        class="arrow next"
+                        for="card2"
+                        aria-label="Próximo depoimento"
+                    >
+                        &#10095;
+                    </label>
+
+
+                    <label
+                        class="arrow prev"
+                        for="card1"
+                        aria-label="Depoimento anterior"
+                    >
+                        &#10094;
+                    </label>
+
+                    <label
+                        class="arrow next"
+                        for="card3"
+                        aria-label="Próximo depoimento"
+                    >
+                        &#10095;
+                    </label>
+
+
+                    <label
+                        class="arrow prev"
+                        for="card2"
+                        aria-label="Depoimento anterior"
+                    >
+                        &#10094;
+                    </label>
+
+                    <label
+                        class="arrow next"
+                        for="card4"
+                        aria-label="Próximo depoimento"
+                    >
+                        &#10095;
+                    </label>
+
+
+                    <label
+                        class="arrow prev"
+                        for="card3"
+                        aria-label="Depoimento anterior"
+                    >
+                        &#10094;
+                    </label>
+
+                    <label
+                        class="arrow next"
+                        for="card1"
+                        aria-label="Próximo depoimento"
+                    >
+                        &#10095;
+                    </label>
+
+
+                    <!-- Indicadores -->
+
+                    <div class="indicadores">
+
+                        <label
+                            for="card1"
+                            aria-label="Mostrar primeiro depoimento"
+                        ></label>
+
+                        <label
+                            for="card2"
+                            aria-label="Mostrar segundo depoimento"
+                        ></label>
+
+                        <label
+                            for="card3"
+                            aria-label="Mostrar terceiro depoimento"
+                        ></label>
+
+                        <label
+                            for="card4"
+                            aria-label="Mostrar quarto depoimento"
+                        ></label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="depoimentos-final">
+
+            <span>
+                TRANSFORMAMOS DADOS EM DECISÕES.
+            </span>
+
+            <h2>
+                Cada projeto começa
+                com uma boa ideia.
+            </h2>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <a href="home.html" class="logo">
+                    Squad G
+                </a>
+
+                <p>
+                    Dados que transformam decisões.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="sobre.html">
+                    Sobre
+                </a>
+
+                <a href="servicos.html">
+                    Serviços
+                </a>
+
+                <a href="projetos.html">
+                    Projetos
+                </a>
+
+                <a href="depoimentos.html">
+                    Depoimentos
+                </a>
+
+                <a href="contato.html">
+                    Contato
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Squad G. Projeto acadêmico.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- G-Data Assistant -->
+
+    <div class="chat-widget">
+
+        <div class="chat-window">
+
+            <div class="chat-header">
+
+                <div class="chat-header-info">
+
+                    <span class="chat-title">
+                        G-Data Assistant
+                    </span>
+
+                    <span class="chat-status">
+                        Assistente da Squad G
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="chat-close"
+                    aria-label="Fechar chat"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="chat-messages">
+
+                <div class="chat-message bot">
+                    Olá! 👋 Sou o G-Data Assistant.
+                    Como posso ajudar?
+                </div>
+
+            </div>
+
+
+            <div class="chat-input-area">
+
+                <input
+                    type="text"
+                    class="chat-input"
+                    placeholder="Digite sua mensagem..."
+                    aria-label="Mensagem para o assistente"
+                >
+
+                <button
+                    type="button"
+                    class="chat-send"
+                    aria-label="Enviar mensagem"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="chat-toggle"
+            aria-label="Abrir G-Data Assistant"
+            aria-expanded="false">
+            ✦
+        </button>
+
+
     </div>
-  </main>
 
-  <footer>
-    <p>Desenvolvido pelo Grupo de Estudantes (SQUAD G)</p>
-    <p>Faculdade Imaculada Conceição do Recife - 2025.</p>
-  </footer>
+
+    <script src="scripts/chat.js"></script>
 
 </body>
+
 </html>
