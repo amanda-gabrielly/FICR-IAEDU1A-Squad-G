@@ -3,14 +3,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatToggle = document.querySelector(".chat-toggle");
     const chatWindow = document.querySelector(".chat-window");
     const chatClose = document.querySelector(".chat-close");
+    const chatHeader = document.querySelector(".chat-header");
     const chatInput = document.querySelector(".chat-input");
     const chatSend = document.querySelector(".chat-send");
     const chatMessages = document.querySelector(".chat-messages");
+
+    const STORAGE_KEY = "squadGChatHistorico";
+
 
     if (
         !chatToggle ||
         !chatWindow ||
         !chatClose ||
+        !chatHeader ||
         !chatInput ||
         !chatSend ||
         !chatMessages
@@ -18,46 +23,132 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error(
             "Erro: elementos do G-Data Assistant não foram encontrados."
         );
+
         return;
     }
 
+
     // =========================================================
-    // ABRIR CHAT
+    // HISTÓRICO DA CONVERSA
     // =========================================================
 
-    chatToggle.addEventListener("click", function () {
-        chatWindow.classList.add("active");
+    let historico = [];
 
-        chatToggle.setAttribute(
-            "aria-expanded",
-            "true"
+
+    // =========================================================
+    // ESCAPAR HTML
+    // =========================================================
+
+    function escaparHTML(texto) {
+
+        return texto
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
+    }
+
+
+    // =========================================================
+    // FORMATAR RESPOSTA DO BOT
+    // =========================================================
+
+    function formatarRespostaBot(texto) {
+
+        const textoSeguro =
+            escaparHTML(texto);
+
+        return textoSeguro.replace(
+            /\*\*(.*?)\*\*/g,
+            "<strong>$1</strong>"
         );
-
-        chatInput.focus();
-    });
+    }
 
 
     // =========================================================
-    // FECHAR CHAT
+    // SALVAR HISTÓRICO
     // =========================================================
 
-    chatClose.addEventListener("click", function () {
-        chatWindow.classList.remove("active");
+    function salvarHistorico() {
 
-        chatToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-    });
+        try {
+
+            sessionStorage.setItem(
+                STORAGE_KEY,
+                JSON.stringify(historico)
+            );
+
+        } catch (error) {
+
+            console.error(
+                "Não foi possível salvar o histórico do chat:",
+                error
+            );
+        }
+    }
 
 
     // =========================================================
-    // ADICIONAR MENSAGEM
+    // CARREGAR HISTÓRICO
     // =========================================================
 
-    function adicionarMensagem(texto, tipo) {
+    function carregarHistorico() {
 
-        const mensagem = document.createElement("div");
+        try {
+
+            const historicoSalvo =
+                sessionStorage.getItem(STORAGE_KEY);
+
+
+            if (!historicoSalvo) {
+                return;
+            }
+
+
+            historico =
+                JSON.parse(historicoSalvo);
+
+
+            if (!Array.isArray(historico)) {
+
+                historico = [];
+
+                return;
+            }
+
+
+            historico.forEach(function (mensagem) {
+
+                adicionarMensagemNaTela(
+                    mensagem.texto,
+                    mensagem.tipo
+                );
+
+            });
+
+        } catch (error) {
+
+            console.error(
+                "Não foi possível carregar o histórico do chat:",
+                error
+            );
+
+            historico = [];
+        }
+    }
+
+
+    // =========================================================
+    // ADICIONAR MENSAGEM NA TELA
+    // =========================================================
+
+    function adicionarMensagemNaTela(
+        texto,
+        tipo
+    ) {
+
+        const mensagem =
+            document.createElement("div");
+
 
         mensagem.classList.add(
             "chat-message",
@@ -65,35 +156,210 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
-        // Mensagens do assistente podem conter Markdown
-        // usando **texto** para representar negrito.
-
         if (tipo === "bot") {
 
-            const textoSeguro = texto
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(
-                    /\*\*(.*?)\*\*/g,
-                    "<strong>$1</strong>"
-                );
-
-            mensagem.innerHTML = textoSeguro;
+            mensagem.innerHTML =
+                formatarRespostaBot(texto);
 
         } else {
 
-            // Mensagem do usuário é inserida como texto puro.
-
-            mensagem.textContent = texto;
+            mensagem.textContent =
+                texto;
         }
 
 
-        chatMessages.appendChild(mensagem);
+        chatMessages.appendChild(
+            mensagem
+        );
+
 
         chatMessages.scrollTop =
             chatMessages.scrollHeight;
     }
+
+
+    // =========================================================
+    // ADICIONAR MENSAGEM
+    // =========================================================
+
+    function adicionarMensagem(
+        texto,
+        tipo,
+        salvar = true
+    ) {
+
+        adicionarMensagemNaTela(
+            texto,
+            tipo
+        );
+
+
+        if (salvar) {
+
+            historico.push({
+                texto: texto,
+                tipo: tipo
+            });
+
+
+            salvarHistorico();
+        }
+    }
+
+
+    // =========================================================
+    // MENSAGEM INICIAL
+    // =========================================================
+
+    function verificarMensagemInicial() {
+
+        if (historico.length === 0) {
+
+            const mensagemInicial =
+                "Olá! 👋 Sou o G-Data Assistant. Como posso ajudar?";
+
+
+            historico.push({
+                texto: mensagemInicial,
+                tipo: "bot"
+            });
+
+
+            salvarHistorico();
+        }
+    }
+
+
+    // =========================================================
+    // ABRIR CHAT
+    // =========================================================
+
+    function abrirChat() {
+
+        chatWindow.classList.add(
+            "active"
+        );
+
+
+        chatToggle.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+
+        chatInput.focus();
+
+
+        chatMessages.scrollTop =
+            chatMessages.scrollHeight;
+    }
+
+
+    // =========================================================
+    // MINIMIZAR CHAT
+    // =========================================================
+
+    function minimizarChat() {
+
+        chatWindow.classList.remove(
+            "active"
+        );
+
+
+        chatToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+
+        chatInput.blur();
+    }
+
+
+    // =========================================================
+    // ALTERNAR CHAT
+    // =========================================================
+
+    function alternarChat() {
+
+        if (
+            chatWindow.classList.contains(
+                "active"
+            )
+        ) {
+
+            minimizarChat();
+
+        } else {
+
+            abrirChat();
+        }
+    }
+
+
+    // =========================================================
+    // BOTÃO ✦ POSSO AJUDAR?
+    // =========================================================
+
+    chatToggle.addEventListener(
+        "click",
+        function () {
+
+            abrirChat();
+
+        }
+    );
+
+
+    // =========================================================
+    // BOTÃO X
+    // =========================================================
+
+    chatClose.addEventListener(
+        "click",
+        function (event) {
+
+            event.stopPropagation();
+
+            minimizarChat();
+
+        }
+    );
+
+
+    // =========================================================
+    // CLICAR NA BARRA DO CHAT
+    // =========================================================
+
+    chatHeader.addEventListener(
+        "click",
+        function () {
+
+            alternarChat();
+
+        }
+    );
+
+
+    // =========================================================
+    // EVITAR QUE CLIQUES NOS ELEMENTOS
+    // DA BARRA FECHEM O CHAT
+    // =========================================================
+
+    chatHeader
+        .querySelectorAll("button")
+        .forEach(function (botao) {
+
+            botao.addEventListener(
+                "click",
+                function (event) {
+
+                    event.stopPropagation();
+
+                }
+            );
+
+        });
 
 
     // =========================================================
@@ -105,11 +371,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const mensagem =
             document.createElement("div");
 
+
         mensagem.classList.add(
             "chat-message",
             "bot",
             "typing-message"
         );
+
 
         mensagem.innerHTML = `
             <span class="typing-dot"></span>
@@ -117,10 +385,15 @@ document.addEventListener("DOMContentLoaded", function () {
             <span class="typing-dot"></span>
         `;
 
-        chatMessages.appendChild(mensagem);
+
+        chatMessages.appendChild(
+            mensagem
+        );
+
 
         chatMessages.scrollTop =
             chatMessages.scrollHeight;
+
 
         return mensagem;
     }
@@ -130,9 +403,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // REMOVER "DIGITANDO..."
     // =========================================================
 
-    function removerDigitando(mensagem) {
+    function removerDigitando(
+        mensagem
+    ) {
 
         if (mensagem) {
+
             mensagem.remove();
         }
     }
@@ -151,6 +427,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Não envia mensagem vazia.
 
         if (texto === "") {
+
             return;
         }
 
@@ -172,6 +449,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // a resposta do Gemini.
 
         chatInput.disabled = true;
+
         chatSend.disabled = true;
 
 
@@ -183,21 +461,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
         try {
 
-            const response = await fetch(
-                "http://localhost:3000/api/chat",
-                {
-                    method: "POST",
+            const response =
+                await fetch(
+                    "http://localhost:3000/api/chat",
+                    {
+                        method: "POST",
 
-                    headers: {
-                        "Content-Type":
-                            "application/json"
-                    },
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
 
-                    body: JSON.stringify({
-                        mensagem: texto
-                    })
-                }
-            );
+                        body: JSON.stringify({
+                            mensagem: texto
+                        })
+                    }
+                );
 
 
             const data =
@@ -254,6 +533,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Libera novamente os controles.
 
             chatInput.disabled = false;
+
             chatSend.disabled = false;
 
             chatInput.focus();
@@ -287,6 +567,35 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     );
+
+
+    // =========================================================
+    // INICIALIZAÇÃO
+    // =========================================================
+
+    carregarHistorico();
+
+
+    verificarMensagemInicial();
+
+
+    // Se o histórico foi carregado mas a mensagem inicial
+    // ainda não estiver na tela, reconstruímos a interface.
+
+    if (
+        chatMessages.children.length === 0 &&
+        historico.length > 0
+    ) {
+
+        historico.forEach(function (mensagem) {
+
+            adicionarMensagemNaTela(
+                mensagem.texto,
+                mensagem.tipo
+            );
+
+        });
+    }
 
 
     console.log(
