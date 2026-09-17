@@ -1,91 +1,448 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="styles/servicos.css">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Portfolio — Serviços & Preços</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/servicos.css">
+    <link rel="stylesheet" href="styles/chat.css">
+
+    <title>Serviços - Squad G</title>
 </head>
+
 <body>
-  <h1>Serviços</h1>
 
-  <!-- Cards simples sem CSS -->
-  <div class = "design">
-    <h2>Design de UI/UX</h2>
-    <p>Wireframes, protótipos e design responsivo.</p>
-    <ul>
-      <li>Protótipos em Figma</li>
-      <li>Design responsivo</li>
-    </ul>
-  
-  <hr>
+    <header class="header">
 
-  <div>
-    <h2>Desenvolvimento Front‑end</h2>
-    <p>Landing pages, sites estáticos e interfaces em HTML/CSS/JS.</p>
-    <ul>
-      <li>Componentes reutilizáveis</li>
-      <li>SEO básico</li>
-    </ul>
-  </div>
-  <hr>
+        <div class="menu-container">
 
-  
-    <h2>Branding & Identidade</h2>
-    <p>Logotipos, paletas e guias de estilo.</p>
-    <ul>
-      <li>Manual básico da marca</li>
-      <li>Fichas de aplicação</li>
-    </ul>
-  </div>
+            <a href="home.html" class="logo">
+                Squad G
+            </a>
 
-  <h1>Planos e Preços</h1>
+            <nav id="menu-principal" class="nav">
 
-  <table border="1" cellpadding="8" cellspacing="0">
-    <tr>
-      <th>Plano</th>
-      <th>Preço</th>
-      <th>Descrição</th>
-    </tr>
+                <ul>
 
-    <tr>
-      <td>Básico</td>
-      <td>R$ 799</td>
-      <td>
-        <ul>
-          <li>1 página responsiva</li>
-          <li>Entrega em 7 dias</li>
-          <li>Suporte por 7 dias</li>
-        </ul>
-      </td>
-    </tr>
+                    <li>
+                        <a href="home.html">
+                            Início
+                        </a>
+                    </li>
 
-    <tr>
-      <td>Pro</td>
-      <td>R$ 1.899</td>
-      <td>
-        <ul>
-          <li>Até 6 páginas</li>
-          <li>Design + Front‑end</li>
-          <li>Entrega em 12 dias</li>
-          <li>Suporte por 30 dias</li>
-        </ul>
-      </td>
-    </tr>
+                    <li>
+                        <a href="sobre.html">
+                            Sobre
+                        </a>
+                    </li>
 
-    <tr>
-      <td>Enterprise</td>
-      <td>R$ 4.800</td>
-      <td>
-        <ul>
-          <li>Projeto sob medida</li>
-          <li>Entrega priorizada</li>
-          <li>Suporte estendido</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
+                    <li>
+                        <a href="servicos.html">
+                            Serviços
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="projetos.html">
+                            Projetos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="habilidades.html">
+                            Habilidades
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contato.html">
+                            Contato
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="titulo-servicos">
+
+            <span class="servicos-label">
+                SQUAD G
+            </span>
+
+            <h1>
+                Nossos Serviços
+            </h1>
+
+            <p>
+                Soluções em dados e tecnologia para transformar
+                informações em decisões mais inteligentes.
+            </p>
+
+        </section>
+
+
+        <section class="servicos">
+
+            <div class="servicos-intro">
+
+                <span class="section-number">
+                    01
+                </span>
+
+                <h2>
+                    O que fazemos
+                </h2>
+
+                <p>
+                    Combinamos análise de dados, Business Intelligence
+                    e tecnologia para criar soluções que ajudam empresas
+                    a compreender melhor suas informações.
+                </p>
+
+            </div>
+
+
+            <div class="servicos-grid">
+
+                <article class="servico-card">
+
+                    <span class="servico-numero">
+                        01
+                    </span>
+
+                    <h3>
+                        Business Intelligence
+                    </h3>
+
+                    <p>
+                        Criamos dashboards e indicadores que transformam
+                        dados em informações claras para apoiar decisões.
+                    </p>
+
+                    <div class="servico-tecnologias">
+                        Power BI · SQL
+                    </div>
+
+                </article>
+
+
+                <article class="servico-card">
+
+                    <span class="servico-numero">
+                        02
+                    </span>
+
+                    <h3>
+                        Análise de Dados
+                    </h3>
+
+                    <p>
+                        Tratamos e analisamos dados para identificar
+                        padrões, oportunidades e informações relevantes.
+                    </p>
+
+                    <div class="servico-tecnologias">
+                        Python · Pandas · SQL
+                    </div>
+
+                </article>
+
+
+                <article class="servico-card">
+
+                    <span class="servico-numero">
+                        03
+                    </span>
+
+                    <h3>
+                        Visualização de Dados
+                    </h3>
+
+                    <p>
+                        Transformamos informações complexas em
+                        visualizações e dashboards mais simples de
+                        interpretar.
+                    </p>
+
+                    <div class="servico-tecnologias">
+                        Power BI · Data Visualization
+                    </div>
+
+                </article>
+
+
+                <article class="servico-card">
+
+                    <span class="servico-numero">
+                        04
+                    </span>
+
+                    <h3>
+                        Soluções Digitais
+                    </h3>
+
+                    <p>
+                        Desenvolvemos soluções digitais utilizando
+                        tecnologia para atender necessidades específicas
+                        de cada projeto.
+                    </p>
+
+                    <div class="servico-tecnologias">
+                        HTML · CSS · JavaScript
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="processo">
+
+            <div class="processo-titulo">
+
+                <span class="section-number">
+                    02
+                </span>
+
+                <h2>
+                    Como trabalhamos
+                </h2>
+
+            </div>
+
+
+            <div class="processo-grid">
+
+                <div class="processo-item">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Entender
+                    </h3>
+
+                    <p>
+                        Conhecemos o problema e entendemos quais
+                        informações são importantes para o projeto.
+                    </p>
+
+                </div>
+
+
+                <div class="processo-item">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        Analisar
+                    </h3>
+
+                    <p>
+                        Organizamos e analisamos os dados para
+                        encontrar informações relevantes.
+                    </p>
+
+                </div>
+
+
+                <div class="processo-item">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        Transformar
+                    </h3>
+
+                    <p>
+                        Transformamos os dados em visualizações,
+                        indicadores e soluções.
+                    </p>
+
+                </div>
+
+
+                <div class="processo-item">
+
+                    <span>
+                        04
+                    </span>
+
+                    <h3>
+                        Decidir
+                    </h3>
+
+                    <p>
+                        Entregamos informações que ajudam na tomada
+                        de decisões mais inteligentes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="servicos-final">
+
+            <span>
+                TRANSFORMAMOS DADOS EM DECISÕES.
+            </span>
+
+            <h2>
+                Dados mais claros.
+                Decisões mais inteligentes.
+            </h2>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer" id="rodape">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <a href="home.html" class="logo">
+                    Squad G
+                </a>
+
+                <p>
+                    Dados que transformam decisões.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="sobre.html">
+                    Sobre
+                </a>
+
+                <a href="servicos.html">
+                    Serviços
+                </a>
+
+                <a href="projetos.html">
+                    Projetos
+                </a>
+
+                <a href="contato.html">
+                    Contato
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Squad G. Projeto acadêmico.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <div class="chat-widget">
+
+        <div class="chat-window">
+
+            <div class="chat-header">
+
+                <div class="chat-header-info">
+
+                    <span class="chat-title">
+                        G-Data Assistant
+                    </span>
+
+                    <span class="chat-status">
+                        Assistente da Squad G
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="chat-close"
+                    aria-label="Fechar chat"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="chat-messages">
+
+                <div class="chat-message bot">
+                    Olá! 👋 Sou o G-Data Assistant.
+                    Como posso ajudar?
+                </div>
+
+            </div>
+
+
+            <div class="chat-input-area">
+
+                <input
+                    type="text"
+                    class="chat-input"
+                    placeholder="Digite sua mensagem..."
+                    aria-label="Mensagem para o assistente"
+                >
+
+                <button
+                    type="button"
+                    class="chat-send"
+                    aria-label="Enviar mensagem"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="chat-toggle"
+            aria-label="Abrir G-Data Assistant"
+            aria-expanded="false"
+        >
+            💬
+        </button>
+
+    </div>
+
+
+    <script src="scripts/chat.js"></script>
 
 </body>
-</html>
 
+</html>

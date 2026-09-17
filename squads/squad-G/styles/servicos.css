@@ -1,20 +1,449 @@
-/* Estilos base - personalize para seu squad */
+/* Configurações gerais */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-   font-family: system-ui, -apple-system, BlinkMacSystemFont,
-               'Segoe UI', sans-serif;
-   background-color: #d3d3d3;;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    background-color: #f5f7fa;
+    color: #172033;
+    line-height: 1.6;
 }
 
-h1{
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* Cabeçalho */
+
+.header {
+    background-color: #ffffff;
+}
+
+.menu-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    min-height: 76px;
+
     display: flex;
-    justify-content: center;
-    margin-bottom: 100px;
-    color: rgb(156, 66, 240);
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.design{
+.logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #173f73;
+    letter-spacing: -0.5px;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav a {
+    color: #4b5563;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: #1769aa;
+}
+
+
+/* Título da página */
+
+.titulo-servicos {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    padding: 90px 0 80px;
+}
+
+.servicos-label {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    color: #1769aa;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.titulo-servicos h1 {
+    max-width: 800px;
+
+    color: #172033;
+
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 0.98;
+    letter-spacing: -3px;
+}
+
+.titulo-servicos p {
+    max-width: 650px;
+
+    margin-top: 28px;
+
+    color: #596579;
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+
+/* Serviços */
+
+.servicos {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+
+    padding: 90px 0 100px;
+
+    border-top: 1px solid #e5eaf0;
+}
+
+.servicos-intro {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.section-number {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #1769aa;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.servicos-intro h2,
+.processo-titulo h2 {
+    color: #172033;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.servicos-intro p {
+    max-width: 650px;
+
+    margin-top: 18px;
+
+    color: #667085;
+    line-height: 1.8;
+}
+
+
+/* Cards de serviços */
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.servico-card {
+    min-height: 310px;
+
+    padding: 32px;
+
     display: flex;
     flex-direction: column;
-    gap: 10px;
+
+    background-color: #ffffff;
+    border: 1px solid #e4e9ef;
+    border-radius: 12px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(23, 32, 51, 0.08);
+}
+
+.servico-numero {
+    color: #1769aa;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.servico-card h3 {
+    max-width: 420px;
+
+    margin-top: 35px;
+
+    color: #172033;
+
+    font-size: 1.7rem;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.servico-card p {
+    max-width: 500px;
+
+    margin-top: 15px;
+
+    color: #667085;
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.servico-tecnologias {
+    margin-top: auto;
+    padding-top: 28px;
+
+    color: #1769aa;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+
+/* Processo */
+
+.processo {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+
+    padding: 30px 0 100px;
+}
+
+.processo-titulo {
+    margin-bottom: 50px;
+}
+
+.processo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.processo-item {
+    padding: 28px 24px;
+
+    border-top: 2px solid #dce5ee;
+}
+
+.processo-item > span {
+    color: #1769aa;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.processo-item h3 {
+    margin-top: 22px;
+
+    color: #172033;
+
+    font-size: 1.2rem;
+}
+
+.processo-item p {
+    margin-top: 12px;
+
+    color: #667085;
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* Chamada final */
+
+.servicos-final {
+    padding: 100px 20px;
+
+    background-color: #173f73;
+
+    text-align: center;
+}
+
+.servicos-final span {
+    color: #b8d9f2;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.servicos-final h2 {
+    max-width: 700px;
+    margin: 18px auto 0;
+
+    color: #ffffff;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+
+/* Rodapé */
+
+.footer {
+    background-color: #101827;
+    color: #aab4c2;
+}
+
+.footer-content {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+
+    padding: 55px 0;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer .logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.footer-brand p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #aab4c2;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:visited {
+    color: #aab4c2;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    padding: 18px 20px;
+
+    border-top: 1px solid #273244;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 900px) {
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .processo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .menu-container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .titulo-servicos {
+        padding: 65px 0;
+    }
+
+    .titulo-servicos h1 {
+        font-size: 3rem;
+        letter-spacing: -2px;
+    }
+
+    .servicos {
+        padding: 65px 0 70px;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .servico-card {
+        min-height: 280px;
+        padding: 26px;
+    }
+
+    .processo {
+        padding: 30px 0 70px;
+    }
+
+    .processo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .servicos-final {
+        padding: 70px 20px;
+    }
+
+    .servicos-final h2 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
 }
