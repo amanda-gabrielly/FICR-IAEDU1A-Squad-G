@@ -1,71 +1,756 @@
-<!-- Contato - Squad G -->
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="styles/contato.css">
-  <title>Contato - Squad G</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/contato.css">
+    <link rel="stylesheet" href="styles/chat.css">
+
+    <title>Contato - Squad G</title>
 </head>
+
 <body>
-   <header>
-    <div class="logo">
-      <img src="squads/squad-G/styles/img/logo squadG.png" alt="logo">
+
+    <header class="header">
+
+        <div class="menu-container">
+
+            <a href="home.html" class="logo">
+                Squad G
+            </a>
+
+            <nav id="menu-principal" class="nav">
+
+                <ul>
+
+                    <li>
+                        <a href="home.html">
+                            Início
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="sobre.html">
+                            Sobre
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="servicos.html">
+                            Serviços
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="projetos.html">
+                            Projetos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="habilidades.html">
+                            Habilidades
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contato.html">
+                            Contato
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="titulo-contato">
+
+            <span class="contato-label">
+                SQUAD G
+            </span>
+
+            <h1>
+                Vamos conversar?
+            </h1>
+
+            <p>
+                Tem uma ideia, projeto ou necessidade relacionada
+                a dados e tecnologia? Entre em contato com a Squad G.
+            </p>
+
+        </section>
+
+
+        <section class="contato">
+
+            <div class="contato-intro">
+
+                <span class="section-number">
+                    01
+                </span>
+
+                <h2>
+                    Entre em contato
+                </h2>
+
+                <p>
+                    Preencha o formulário e conte um pouco sobre
+                    o que você precisa. Nossa equipe está pronta
+                    para conhecer sua ideia.
+                </p>
+
+
+                <div class="contato-destaques">
+
+                    <div class="contato-destaque">
+
+                        <span>
+                            DADOS
+                        </span>
+
+                        <p>
+                            Soluções orientadas por informações.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contato-destaque">
+
+                        <span>
+                            TECNOLOGIA
+                        </span>
+
+                        <p>
+                            Desenvolvimento de soluções digitais.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contato-destaque">
+
+                        <span>
+                            ESTRATÉGIA
+                        </span>
+
+                        <p>
+                            Informação para apoiar decisões.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="formulario-container">
+
+                <form
+                    class="formulario-contato"
+                    id="formulario-contato"
+                >
+
+                    <div class="campo">
+
+                        <label for="nome">
+                            Nome
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="assunto">
+                            Assunto
+                        </label>
+
+                        <input
+                            type="text"
+                            id="assunto"
+                            name="assunto"
+                            placeholder="Qual é o assunto?"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="mensagem">
+                            Mensagem
+                        </label>
+
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="6"
+                            placeholder="Conte um pouco sobre sua ideia ou necessidade..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="botao-enviar"
+                    >
+                        Enviar mensagem
+                    </button>
+
+
+                    <p
+                        class="mensagem-formulario"
+                        id="mensagem-formulario"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <section class="equipe-contato">
+
+            <div class="equipe-contato-titulo">
+
+                <span class="section-number">
+                    02
+                </span>
+
+                <h2>
+                    Fale com a nossa equipe
+                </h2>
+
+                <p>
+                    Cada integrante possui diferentes áreas de interesse.
+                    Escolha com quem você gostaria de conversar.
+                </p>
+
+            </div>
+
+
+            <div class="equipe-contato-grid">
+
+
+                <!-- Amanda -->
+
+                <article class="contato-card">
+
+                    <div class="contato-card-conteudo">
+
+                        <img
+                            src="styles/img/amanda.JPG"
+                            alt="Foto de Amanda"
+                        >
+
+                        <div class="contato-card-info">
+
+                            <span>
+                                DADOS & BI
+                            </span>
+
+                            <h3>
+                                Quer falar sobre dados?
+                            </h3>
+
+                            <p>
+                                Fale com a Amanda sobre dados,
+                                Business Intelligence e análise
+                                de informações.
+                            </p>
+
+                            <strong>
+                                Fale com a Amanda
+                            </strong>
+
+                            <div class="contato-icones">
+
+                                <a
+                                    href="https://www.instagram.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Instagram"
+                                >
+                                    <img
+                                        src="styles/img/instagrampng.png"
+                                        alt="Instagram"
+                                    >
+                                </a>
+
+                                <a
+                                    href="https://www.linkedin.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="LinkedIn"
+                                >
+                                    <img
+                                        src="styles/img/linkedinpng.png"
+                                        alt="LinkedIn"
+                                    >
+                                </a>
+
+                                <a
+                                    href="#"
+                                    aria-label="E-mail de Amanda"
+                                >
+                                    <img
+                                        src="styles/img/mailpng.png"
+                                        alt="E-mail"
+                                    >
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Aylton -->
+
+                <article class="contato-card">
+
+                    <div class="contato-card-conteudo">
+
+                        <img
+                            src="styles/img/aylton.jpeg"
+                            alt="Foto de Aylton"
+                        >
+
+                        <div class="contato-card-info">
+
+                            <span>
+                                DESENVOLVIMENTO
+                            </span>
+
+                            <h3>
+                                Quer falar sobre desenvolvimento?
+                            </h3>
+
+                            <p>
+                                Fale com o Aylton sobre desenvolvimento
+                                e construção de soluções digitais.
+                            </p>
+
+                            <strong>
+                                Fale com o Aylton
+                            </strong>
+
+                            <div class="contato-icones">
+
+                                <a
+                                    href="https://www.instagram.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Instagram"
+                                >
+                                    <img
+                                        src="styles/img/instagrampng.png"
+                                        alt="Instagram"
+                                    >
+                                </a>
+
+                                <a
+                                    href="https://www.linkedin.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="LinkedIn"
+                                >
+                                    <img
+                                        src="styles/img/linkedinpng.png"
+                                        alt="LinkedIn"
+                                    >
+                                </a>
+
+                                <a
+                                    href="#"
+                                    aria-label="E-mail de Aylton"
+                                >
+                                    <img
+                                        src="styles/img/mailpng.png"
+                                        alt="E-mail"
+                                    >
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Diógenes -->
+
+                <article class="contato-card">
+
+                    <div class="contato-card-conteudo">
+
+                        <img
+                            src="styles/img/diogenes.jpeg"
+                            alt="Foto de Diógenes"
+                        >
+
+                        <div class="contato-card-info">
+
+                            <span>
+                                PROJETOS
+                            </span>
+
+                            <h3>
+                                Quer falar sobre projetos?
+                            </h3>
+
+                            <p>
+                                Fale com o Diógenes sobre projetos
+                                e desenvolvimento colaborativo.
+                            </p>
+
+                            <strong>
+                                Fale com o Diógenes
+                            </strong>
+
+                            <div class="contato-icones">
+
+                                <a
+                                    href="https://www.instagram.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Instagram"
+                                >
+                                    <img
+                                        src="styles/img/instagrampng.png"
+                                        alt="Instagram"
+                                    >
+                                </a>
+
+                                <a
+                                    href="https://www.linkedin.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="LinkedIn"
+                                >
+                                    <img
+                                        src="styles/img/linkedinpng.png"
+                                        alt="LinkedIn"
+                                    >
+                                </a>
+
+                                <a
+                                    href="#"
+                                    aria-label="E-mail de Diógenes"
+                                >
+                                    <img
+                                        src="styles/img/mailpng.png"
+                                        alt="E-mail"
+                                    >
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Guilherme -->
+
+                <article class="contato-card">
+
+                    <div class="contato-card-conteudo">
+
+                        <img
+                            src="styles/img/guilherme.jpeg"
+                            alt="Foto de Guilherme"
+                        >
+
+                        <div class="contato-card-info">
+
+                            <span>
+                                TECNOLOGIA
+                            </span>
+
+                            <h3>
+                                Quer falar sobre tecnologia?
+                            </h3>
+
+                            <p>
+                                Fale com o Guilherme sobre tecnologia
+                                e soluções desenvolvidas pela equipe.
+                            </p>
+
+                            <strong>
+                                Fale com o Guilherme
+                            </strong>
+
+                            <div class="contato-icones">
+
+                                <a
+                                    href="https://www.instagram.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Instagram"
+                                >
+                                    <img
+                                        src="styles/img/instagrampng.png"
+                                        alt="Instagram"
+                                    >
+                                </a>
+
+                                <a
+                                    href="https://www.linkedin.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="LinkedIn"
+                                >
+                                    <img
+                                        src="styles/img/linkedinpng.png"
+                                        alt="LinkedIn"
+                                    >
+                                </a>
+
+                                <a
+                                    href="#"
+                                    aria-label="E-mail de Guilherme"
+                                >
+                                    <img
+                                        src="styles/img/mailpng.png"
+                                        alt="E-mail"
+                                    >
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="contato-final">
+
+            <span>
+                TRANSFORMAMOS DADOS EM DECISÕES.
+            </span>
+
+            <h2>
+                Sua ideia pode ser
+                o próximo projeto.
+            </h2>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer" id="rodape">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <a href="home.html" class="logo">
+                    Squad G
+                </a>
+
+                <p>
+                    Dados que transformam decisões.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="sobre.html">
+                    Sobre
+                </a>
+
+                <a href="servicos.html">
+                    Serviços
+                </a>
+
+                <a href="projetos.html">
+                    Projetos
+                </a>
+
+                <a href="contato.html">
+                    Contato
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Squad G. Projeto acadêmico.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- G-Data Assistant -->
+
+    <div class="chat-widget">
+
+        <div class="chat-window">
+
+            <div class="chat-header">
+
+                <div class="chat-header-info">
+
+                    <span class="chat-title">
+                        G-Data Assistant
+                    </span>
+
+                    <span class="chat-status">
+                        Assistente da Squad G
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="chat-close"
+                    aria-label="Fechar chat"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="chat-messages">
+
+                <div class="chat-message bot">
+                    Olá! 👋 Sou o G-Data Assistant.
+                    Como posso ajudar?
+                </div>
+
+            </div>
+
+
+            <div class="chat-input-area">
+
+                <input
+                    type="text"
+                    class="chat-input"
+                    placeholder="Digite sua mensagem..."
+                    aria-label="Mensagem para o assistente"
+                >
+
+                <button
+                    type="button"
+                    class="chat-send"
+                    aria-label="Enviar mensagem"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="chat-toggle"
+            aria-label="Abrir G-Data Assistant"
+            aria-expanded="false"
+        >
+            ✦
+        </button>
+
     </div>
 
-    <div class="menu-container">
-      <nav id="menu-principal" class="nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Sobre Nós</a></li>
-          <li><a href="#">Serviços</a></li>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Habilidades</a></li>
-          <li><a href="#">Depoimentos</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <div class="titulo-contatos">
-    <img src="squads/squad-G/styles/img/logocontatos" alt="logo-contatos">
-    <p>Confira ao lado as nossas Redes Sociais.</p>
-  </div>
 
-  <div class="fotos">
-        <img src="squads/squad-G/styles/img/amanda.JPG" alt="Foto perfil Amanda">
-        <h2>Amanda</h2>
-        <img src="squads/squad-G/styles/img/instagrampng" alt="icon-contato">
-        <img src="squads/squad-G/styles/img/linkedinpng" alt="icon-contato">
-        <img src="squads/squad-G/styles/img/mailpng" alt="icon-contato">
-  </div>
+    <script src="scripts/chat.js"></script>
 
-  <div class="fotos">
-        <img src="squads/squad-G/styles/img/aylton.JPG" alt="Foto perfil Aylton">
-        <h2>Aylton</h2>
-        <img src="squads/squad-G/styles/img/instagrampng" alt="icon-contato">
-        <img src="squads/squad-G/styles/img/linkedinpng" alt="icon-contato">
-        <img src="squads/squad-G/styles/img/mailpng" alt="icon-contato">
-  </div>
 
-  <div class="fotos">
-        <img src="squads/squad-G/styles/img/diogenes.JPG" alt="Foto perfil Diogenes">
-        <h2>Diógenes</h2>
-        <img src="squads/squad-G/styles/img/instagrampng" alt="icon-contato">
-        <img src="squads/squad-G/styles/img/linkedinpng" alt="icon-contato">
-        <img src="squads/squad-G/styles/img/mailpng" alt="icon-contato">
-  </div>
+    <!-- Formulário -->
 
-  <div class="fotos">
-        <img src="squads/squad-G/styles/img/guilherme.JPG" alt="Foto perfil Guilherme">
-        <h2>Guilherme</h2>
-        <img src="squads/squad-G/styles/img/instagrampng" alt="icon-contato">
-        <img src="squads/squad-G/styles/img/linkedinpng" alt="icon-contato">
-        <img src="squads/squad-G/styles/img/mailpng" alt="icon-contato">
-  </div>
-  <main>
-     <footer>
-    <p>Desenvolvido pelo Grupo de Estudantes (SQUAD G)</p>
-    <p>Faculdade Imaculada Conceição do Recife - 2025.</p>
-  </footer>
+    <script>
+
+        const formulario =
+            document.querySelector("#formulario-contato");
+
+        const mensagemFormulario =
+            document.querySelector("#mensagem-formulario");
+
+
+        formulario.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+                mensagemFormulario.textContent =
+                    "Mensagem preparada com sucesso! Em uma versão de produção, ela seria enviada para a equipe.";
+
+                formulario.reset();
+
+            }
+        );
+
+    </script>
+
 </body>
+
 </html>
